@@ -11,6 +11,8 @@ COPY client/package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN npm install sass
+
 # copy local files to app folder
 COPY client/ ./
 RUN ls

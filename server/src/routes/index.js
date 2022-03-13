@@ -3,7 +3,7 @@ require('dotenv').config();
      // Posts routes
      app.use('/api/posts', postRoutes);
 }
-export default Router;
+// export default Router;
 import express from 'express';
 
 let router = express.Router();

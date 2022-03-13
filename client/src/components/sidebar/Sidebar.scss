@@ -1,0 +1,26 @@
+.sidebar{
+    height: 100%;
+    width: 25%;
+    max-width: 250px;
+    padding: 50px 25px;
+    background-color: var(--color-turquoise);
+    position: fixed;
+    top: 0;
+    left: 0;
+    .list-group{
+        &-item{
+            background-color: var(--color-turquoise);
+            border: 0;
+            color: var(--color-white);
+            a{
+                color: var(--color-white);
+                text-decoration: none;
+                font-weight: bold;
+                text-transform: uppercase;
+                &:hover{
+                    color: var(--color-light-turquoise);
+                }
+            }
+        }
+    }
+}

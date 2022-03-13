@@ -1,0 +1,29 @@
+:root{
+  --color-white : #ffffff;
+  --color-black : #000000;
+  --color-orange: #ff9f1c;
+  --color-light-orange: #ffbf69;
+  --color-turquoise: #2ec4b6;
+  --color-light-turquoise: #cbf3f0;
+}
+
+html, body{
+  background-color: var(--color-white);
+  color: var(--color-black);
+  height: 100%;
+}
+.App,
+#root{
+  height: 100%;
+}
+.content{
+  width: 100%;
+  padding: 50px 0 50px 250px;
+  background-color: var(--color-white);
+  .container{
+    padding:  0 40px;
+  }
+}
+.pageContent{
+  margin-top: 75px;
+}

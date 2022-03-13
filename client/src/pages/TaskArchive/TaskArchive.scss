@@ -1,0 +1,59 @@
+
+.TaskArchive{
+    &__content{
+        & > * { 
+            flex: 1 0 auto;
+        }
+        &--column{
+            flex-direction: column;
+            border: 2px solid var(--color-white);
+            flex: 0 0 275px;
+            max-width: 275px;
+            &:not(.addMore){
+                background-color: var(--color-light-turquoise);
+            }
+            &Header{
+                background-color: var(--color-turquoise);
+                color:  var(--color-white);
+                padding: 5px 10px;
+                h3{
+                    margin-bottom: 0;
+                    font-weight: normal;
+                }
+            }
+        }
+    }
+}
+.Task{
+    flex-direction: column;
+    margin: 10px 5px;
+    background-color: var(--color-light-turquoise);
+    border: 2px solid var(--color-turquoise);
+    display: block;
+    color: var(--black);
+    text-decoration: none;
+    &:hover,
+    &:focus{
+        color: var(--black);
+    }
+    &__header,
+    &__footer{
+        padding: 5px 10px;
+    }
+    &__header,
+    &__content{
+        border-bottom: 1px solid var(--color-turquoise);
+    }
+    &__header{
+        justify-content: space-between;
+    }
+    &__content{
+        padding: 10px;
+    }
+    &__footer{
+        font-size: 12px;
+        text-align: right;
+    }
+    &__modified{
+    }
+}
