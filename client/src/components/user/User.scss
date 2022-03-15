@@ -1,0 +1,15 @@
+.userItem{
+    margin: 0 auto;
+    text-align: center;
+    color: inherit;
+    &__figure{
+        overflow: hidden;
+        max-width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    &__img{
+        object-position: center;
+        object-fit: cover;
+    }
+}
