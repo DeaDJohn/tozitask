@@ -16,7 +16,10 @@ export default function TaskSingle() {
 		
 		fetch(`${url + taskId}`)
         .then(response => response.json())
-        .then(data => setTaskItem(data));
+        .then(data => setTaskItem(data))
+		.catch(error => {
+            console.error('There was an error!', error);
+        });
 
 	}, [])
 
@@ -43,6 +46,13 @@ export default function TaskSingle() {
 						<div className="TaskSingle__group">
 							<label className="TaskSingle__group__title">Task description</label>
 							<textarea name="taskDescription" value={ taskItem ?  taskItem.body : null }  className="TaskSingle__group__input form-control" />
+						</div>
+						<div className="TaskSingle__group">
+							<label className="TaskSingle__group__title">Asignar a</label>
+							<input name="taskName" type="text" className="TaskSingle__group__input form-control" placeholder="Asignar a" value={ taskItem ?  taskItem.title : null } />
+						</div>
+						<div className="TaskSingle__group align-item-end my-5">	
+							<input type="submit" value="Save" className="btn btn-primary" />
 						</div>
 					</div>
 				</div>
