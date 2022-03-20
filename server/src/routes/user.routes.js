@@ -95,4 +95,10 @@ userRouter.delete("/:User_id", (req, res, next) => {
   });
 });
 
+userRouter.use('/login', (req, res) => {
+  res.send({
+    token: 'test123'
+  });
+});
+
 export default userRouter;
