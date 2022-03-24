@@ -42,7 +42,7 @@ userRouter.post("/", (req, res, next) => {
     nickname: req.body.nickname,
     email: req.body.email,
     password: req.body.password,
-    created_at: req.body.created_at,
+    // created_at: req.body.created_at,
     avatar: req.body.avatar
   };
    User.create(newUser, function(err, result) {
