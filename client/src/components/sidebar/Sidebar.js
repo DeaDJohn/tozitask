@@ -1,15 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useDataLayerValue } from '../../DataLayer';
 import User from '../user/User';
 import './Sidebar.scss';
 
 
 export default function Sidebar() {
-	const user = {
-		id: 1,
-		name: "Acerbi",
-		img: "//img.uefa.com/imgml/TP/players/3/2020/324x324/250052957.jpg"
-	}
+	const [{ user }, dispatch] = useDataLayerValue();
+	console.log(user);
+	// const user = {
+	// 	id: 1,
+	// 	name: "Acerbi",
+	// 	img: "//img.uefa.com/imgml/TP/players/3/2020/324x324/250052957.jpg"
+	// }
 	return (
 		<div className="sidebar">
 			<div className="sidebar__header mb-5">

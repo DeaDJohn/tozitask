@@ -1,15 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import React from 'react';
+import React, { createContext } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
+import { DataLayer } from "./DataLayer";
+import reducer, { initialState } from "./reducer";
+
+
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+    <DataLayer initialState={initialState} reducer={reducer}>
+        <App />
+      </DataLayer>
     </BrowserRouter>,
   </React.StrictMode>,
   document.getElementById('root')

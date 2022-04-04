@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import "./Login.scss";
+import { useDataLayerValue } from '../../DataLayer';
 
 async function loginUser(credentials) {
     return fetch('//localhost:8080/login', {
@@ -31,14 +32,22 @@ export default function Login({setToken}) {
     const [username, setUserName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
-
+    const [{ user }, dispatch] = useDataLayerValue();
     const handleLogin = async e => {
         e.preventDefault();
-        const token = await loginUser({
-          username,
-          password
+        var user = {
+            username: username,
+            password: password
+        }
+        dispatch({
+            type: "SET_USER",
+            user: user,
         });
-        setToken(token);
+        // const token = await loginUser({
+        //   username,
+        //   password
+        // });
+        // setToken(token);
     }
 
     const handleRegister = async e => {

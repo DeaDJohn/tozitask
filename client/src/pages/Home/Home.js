@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Login from '../../components/login/Login';
+import { useDataLayerValue } from '../../DataLayer';
 
 
 export default function Home() {
-  const [token, setToken] = useState();
-  console.log(token);
-  if(!token) {
-    return <Login setToken={setToken} />
+  const [{ user }, dispatch] = useDataLayerValue();
+  
+  console.log(user);
+  if(!user) {
+    return <Login />
   }
   return (
     <div className="container-fluid">

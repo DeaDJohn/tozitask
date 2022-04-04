@@ -11,9 +11,10 @@ import TaskArchive from './pages/TaskArchive/TaskArchive';
 import TaskSingle from './pages/TaskSingle/TaskSingle';
 import Home from './pages/Home/Home';
 import Login from './components/login/Login';
+import { useDataLayerValue } from "./DataLayer";
 
 function App() {
-  
+  const [{  login }, dispatch] = useDataLayerValue();
   return (
     <div className="App d-flex">
       <Sidebar />
