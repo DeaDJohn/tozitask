@@ -8,9 +8,10 @@ import userRouter from './routes/user.routes';
 import './config/mongodb.config';
 
 const app = express();
-// const cors = require('cors');
+const cors = require('cors');
+
 const PORT = 8080;
-// app.use(cors());
+app.use(cors());
 app.use(
   bodyParser.urlencoded({
     extended: true

@@ -4,8 +4,10 @@ import express from 'express';
 // import './config/mongodb.config';
 // import postRouter from './routes/post.router';
 
+const cors = require('cors');
 const app = express();
 const PORT = 8080;
+app.use(cors());
 
 // Our DB Configuration
 //require('./src/database');
