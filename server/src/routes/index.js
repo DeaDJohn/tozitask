@@ -1,7 +1,7 @@
 require('dotenv').config();
  function Router(app){
      // Posts routes
-     app.use('/api/posts', postRoutes);
+     app.use('/api/task', postRoutes);
      app.use('/api/user', userRoutes);
 }
 // export default Router;

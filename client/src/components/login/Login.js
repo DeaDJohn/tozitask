@@ -24,8 +24,7 @@ async function RegisterUser(credentials) {
       body: JSON.stringify(credentials)
     })
     .then(data => data.json())
-    .then(data => console.log(data))
-    
+    .then(data => console.log(data))  
 }
 
 export default function Login({setToken}) {
@@ -43,11 +42,11 @@ export default function Login({setToken}) {
             type: "SET_USER",
             user: user,
         });
-        // const token = await loginUser({
-        //   username,
-        //   password
-        // });
-        // setToken(token);
+        const token = await loginUser({
+          username,
+          password
+        });
+        setToken(token);
     }
 
     const handleRegister = async e => {

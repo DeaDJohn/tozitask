@@ -20,7 +20,7 @@ app.use(
 app.use(bodyParser.json());
 
 app.use('/api', router);
-app.use('/api/posts', postRouter);
+app.use('/api/task', postRouter);
 app.use('/api/user', userRouter);
 app.use('/login', (req, res) => {
   res.send({

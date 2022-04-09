@@ -64,8 +64,8 @@ postRouter.patch("/:post_id", (req, res, next) => {
   Post.findByIdAndUpdate(req.params.post_id,{ $set: fieldsToUpdate }, { new: true },  function (err, result) {
       if(err){
           res.status(400).send({
-             success: false,
-            error: err.message
+              success: false,
+              error: err.message
             });
       }
       res.status(200).send({

@@ -9,8 +9,8 @@ services:
     container_name: myapp-node-server
     command: npm run start
     volumes:
-      - ./server/:/usr/src/app
-      - /usr/src/app/node_modules
+      - ./server:/usr/src/app
+      - ./server/node_modules:/usr/src/app/node_modules
     ports:
       - "8080:8080"
     depends_on:
